@@ -1,3 +1,4 @@
+//user modelinin oluşturulması ve export edilmesi
 const user = {
     id: "",
     imageUri: "",

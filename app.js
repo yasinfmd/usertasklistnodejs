@@ -2,10 +2,15 @@ const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require('cors')
+    //ilgili bağımlılıkların yüklenmesi
 const userListRouter = require('./api/routes/userlist');
+//ilgili rotanın çağırılması 
+
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+//cors 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
@@ -13,7 +18,7 @@ app.use(function(req, res, next) {
     next();
 });
 app.use(cors())
-
+    //ilgili rotaya gelen isteklerin yönlendirilmesi
 app.use('/userlist', userListRouter);
 
 app.use((req, res, next) => {
