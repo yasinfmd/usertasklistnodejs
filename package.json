@@ -1,0 +1,24 @@
+{
+    "name": "taskapi",
+    "version": "1.0.0",
+    "description": "taskApi",
+    "main": "server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "dev": "nodemon src/server.js"
+    },
+    "keywords": [
+        "taskApi"
+    ],
+    "author": "Yasin Dalkılıc",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
+}
